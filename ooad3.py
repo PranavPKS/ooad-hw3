@@ -6,6 +6,12 @@ Class Store():
         self.active_transactions = []
         self.completed_transactions = []
 
+    def getTool():
+        tool = random.choice(list(self.Tools))
+        self.Tools.remove(tool)
+
+        return tool
+
     def SortandUpdate(self,day_num):
         self.active_transactions.sort(key = lambda x:x[4])
 
@@ -16,7 +22,13 @@ Class Store():
             if self.active_transactions[i][4] > day_num:
                 break
 
-        ret  = self.active_transactions[:j]
+        completed_returns  = self.active_transactions[:j]
+
+        ret = {}
+
+        for row in completed_returns:
+            ret[row[1]] = row[2]
+
         self.completed_transactions.append(self.active_transactions[:j])
         self.active_transactions = self.active_transactions[j+1:]
 
@@ -40,18 +52,33 @@ Class Store():
 
         c_id = customer.getCustomerID()
 
-        return_day = day_num + num_nights
-        total_price = 0
-        t_ids = []
-
-        for tool in req_tools:
-            total_price += tool.GetPricePerDay() * num_nights
-            t_ids.append(tool.GetID())
-
-        self.active_transactions.append([trans_id,c_id,t_ids,day_num,return_day,total_price])
+        if (checkCurrentTools(cid) < 3):
+            return_day = day_num + num_nights
+            total_price = 0
+            t_ids = []
 
 
-Class DaysSimulator():
+            for tool in req_tools:
+                total_price += tool.GetPricePerDay() * num_nights
+                t_ids.append(tool.GetID())
+
+            self.active_transactions.append([trans_id,c_id,t_ids,day_num,return_day,total_price])
+
+
+def DaysSimulator(customers,tools):
+
+    cust_track = {c.getCustomerID():[] for c in customers}
+
+    for i in range(0, 35):
+        #check if inventory is not empty
+        while(Store.GetInventoryStock() != 0):
+            customer = random.choice(customers)
+            cid = customer.getCustomerID()
+            num_tools = random.choice(list(range(1,min(max(customer.getNumOfTools(),len(cust_track[cid]),Store.GetInventoryStock()))))
+
+            for i in
+
+
 
 
 
