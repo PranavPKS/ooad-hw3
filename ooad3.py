@@ -1,12 +1,12 @@
 import random
 
-Class Store():
+class Store():
     def __init__(self,tools):
         self.Tools = set(tools)
         self.active_transactions = []
         self.completed_transactions = []
 
-    def getTool():
+    def getTool(self):
         tool = random.choice(list(self.Tools))
         self.Tools.remove(tool)
 
@@ -32,6 +32,8 @@ Class Store():
 
         for row in completed_returns:
             ret[row[1]] = row[2]
+            for t in row[2]:
+                self.Tools.add(t)
 
         self.completed_transactions.extend(completed_returns)
         self.active_transactions = self.active_transactions[j+1:]
@@ -52,14 +54,43 @@ Class Store():
         c_id = customer.getCustomerID()
         return_day = day_num + num_nights
         total_price = 0
-        t_ids = []
+        tools = []
 
 
         for tool in req_tools:
             total_price += tool.GetPricePerDay() * num_nights
-            t_ids.append(tool.GetID())
+            tools.append(tool)
 
-        self.active_transactions.append([trans_id,c_id,t_ids,day_num,return_day,total_price])
+        self.active_transactions.append([trans_id,c_id,tools,day_num,return_day,total_price])
+
+    def generateReport(self):
+        print("Number of tools currently available: ", len(self.Tools))
+        for t in self.Tools:
+            print(t.getType() + str(t.GetID()))
+        total_price = 0
+        for a in self.active_transactions:
+            total_price += a[5]
+        for c in self.completed_transactions:
+            total_price += c[5]
+        print("Amount of money they store made in 35 days: ", total_price)
+
+        print("Completed Rentals: ")
+        for c in self.completed_transactions:
+            print("\nCustomer ID: ", c[1])
+            print("Tools Rented: ")
+            for t in c[2]:
+                print(t.getType() + str(t.GetID()))
+            print("Number of days rented: ", c[4]-c[3])
+            print("Total amount : ", c[5])
+
+        print("Active Rentals: ")
+        for c in self.active_transactions:
+            print("\nCustomer ID: ", c[1])
+            print("Tools Rented: ")
+            for t in c[2]:
+                print(t.getType() + str(t.GetID()))
+            print("Nummber of days rented: ", c[4]-c[3])
+            print("Total amount : ", c[5])
 
 
 def DaysSimulator(customers,tools):
@@ -79,15 +110,18 @@ def DaysSimulator(customers,tools):
 
             try:
                 if (hw_rental.GetInventoryStock() >2):
-                    customer = random.choice([c for c in customers if len(cust_track[c.getCustomerID()]) < 3 ])
+                    customer = random.choice([c for c in customers if max(c.getNumOfTools()) - len(cust_track[c.getCustomerID()]) !=0 ])
+
                 else:
-                    customer = random.choice([c for c in customers if c.getType()!=2])
+                    customer = random.choice([c for c in customers if c.getType()!=2 and max(c.getNumOfTools()) - len(cust_track[c.getCustomerID()]) !=0])
 
             except:
                 break
 
             cid = customer.getCustomerID()
-            num_tools = random.choice(list(range(1,min(max(customer.getNumOfTools()),max(customer.getNumOfTools())-len(cust_track[cid]),hw_rental.GetInventoryStock())+1)))
+
+            choice_days = list(set(list(range(1,min(max(customer.getNumOfTools()),max(customer.getNumOfTools())-len(cust_track[cid]),hw_rental.GetInventoryStock())+1))) & set(customer.getNumOfTools()))
+            num_tools = random.choice(choice_days)
 
             tools = []
             for j in range(num_tools):
@@ -97,12 +131,13 @@ def DaysSimulator(customers,tools):
 
             curr_trans_id += 1
             hw_rental.createRental(curr_trans_id,day,customer,tools, random.choice(customer.getNumOfDays()))
+    hw_rental.generateReport()
 
 
 
 
 
-Class Customer():
+class Customer():
     def __init__(self,nt,nd,id,t):
         self.NumOfTools = nt
         self.NumOfDays = nd
@@ -122,28 +157,28 @@ Class Customer():
         return self.Type
 
 
-Class CasualCustomer(Customer):
+class CasualCustomer(Customer):
     def __init__(self, id):
-        super()._init_([1,2],[1,2],id,1)
+        super().__init__([1,2],[1,2],id,1)
 
 
-Class BusinessCustomer(Customer):
+class BusinessCustomer(Customer):
     def __init__(self, id):
-        super()._init_([3],[7],id,2)
+        super().__init__([3],[7],id,2)
 
 
-Class RegularCustomer(Customer):
+class RegularCustomer(Customer):
     def __init__(self, id):
-        super()._init_([1,2,3],[3,4,5],id,3)
+        super().__init__([1,2,3],[3,4,5],id,3)
 
 
 
 
-Class Tool():
+class Tool():
     def __init__(self,ppd,id,t):
         self.PricePerDay = ppd
         self.ID=id
-        self.type = t
+        self.Type = t
 
     def GetID(self):
         return self.ID
@@ -151,34 +186,38 @@ Class Tool():
     def GetPricePerDay(self):
         return self.PricePerDay
 
-Class PaintingTool(Tool):
-    def __init__(self,id):
-        super()._init_(7,id,'painting')
+    def getType(self):
+        return self.Type
 
-Class ConcreteTool(Tool):
-    def __init__(self,id):
-        super()._init_(3,id,'concrete')
 
-Class PlumbingTool(Tool):
+class PaintingTool(Tool):
     def __init__(self,id):
-        super()._init_(8,id,'plumbing')
+        super().__init__(7,id,'painting')
 
-Class WoodworkTool(Tool):
+class ConcreteTool(Tool):
     def __init__(self,id):
-        super()._init_(4,id,'woodwork')
+        super().__init__(3,id,'concrete')
 
-Class YardworkTool(Tool):
+class PlumbingTool(Tool):
     def __init__(self,id):
-        super()._init_(5,id,'yardwork')
+        super().__init__(8,id,'plumbing')
+
+class WoodworkTool(Tool):
+    def __init__(self,id):
+        super().__init__(4,id,'woodwork')
+
+class YardworkTool(Tool):
+    def __init__(self,id):
+        super().__init__(5,id,'yardwork')
 
 
 
 def createCustomer(type,id):
-    if type=1:
+    if type==1:
         return CasualCustomer(id)
-    if type=2:
+    if type==2:
         return BusinessCustomer(id)
-    if type=3:
+    if type==3:
         return RegularCustomer(id)
 
 
@@ -210,4 +249,3 @@ if __name__ == '__main__':
 
 
     DaysSimulator(customers,tools)
-    
