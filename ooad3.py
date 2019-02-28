@@ -13,6 +13,11 @@ Class Store():
         return tool
 
     def SortandUpdate(self,day_num):
+
+        ret = {}
+        if (day_num == 0):
+            return ret
+
         self.active_transactions.sort(key = lambda x:x[4])
 
         j=0
@@ -24,12 +29,11 @@ Class Store():
 
         completed_returns  = self.active_transactions[:j]
 
-        ret = {}
 
         for row in completed_returns:
             ret[row[1]] = row[2]
 
-        self.completed_transactions.append(self.active_transactions[:j])
+        self.completed_transactions.extend(completed_returns)
         self.active_transactions = self.active_transactions[j+1:]
 
         return ret
@@ -41,52 +45,69 @@ Class Store():
     def GetInventoryStock(self):
         return len(self.Tools)
 
-    def checkCurrentTools(cid):
-        count = 0
-        for t in active_transactions:
-            if t[1] == cid:
-                count + = len(t[2])
 
     def createRental(self,trans_id,day_num,customer,req_tools,num_nights):
 
 
         c_id = customer.getCustomerID()
-
-        if (checkCurrentTools(cid) < 3):
-            return_day = day_num + num_nights
-            total_price = 0
-            t_ids = []
+        return_day = day_num + num_nights
+        total_price = 0
+        t_ids = []
 
 
-            for tool in req_tools:
-                total_price += tool.GetPricePerDay() * num_nights
-                t_ids.append(tool.GetID())
+        for tool in req_tools:
+            total_price += tool.GetPricePerDay() * num_nights
+            t_ids.append(tool.GetID())
 
-            self.active_transactions.append([trans_id,c_id,t_ids,day_num,return_day,total_price])
+        self.active_transactions.append([trans_id,c_id,t_ids,day_num,return_day,total_price])
 
 
 def DaysSimulator(customers,tools):
 
     cust_track = {c.getCustomerID():[] for c in customers}
-
-    for i in range(0, 35):
+    curr_trans_id = 0
+    hw_rental = Store(tools)
+    for day in range(1, 36):
         #check if inventory is not empty
-        while(Store.GetInventoryStock() != 0):
-            customer = random.choice(customers)
-            cid = customer.getCustomerID()
-            num_tools = random.choice(list(range(1,min(max(customer.getNumOfTools(),len(cust_track[cid]),Store.GetInventoryStock()))))
+        tools_returned = hw_rental.SortandUpdate(day)
 
-            for i in
+        for key,value in tools_returned.items():
+            for t in value:
+                cust_track[key].remove(t)
+
+        while(hw_rental.GetInventoryStock() > 0):
+
+            try:
+                if (hw_rental.GetInventoryStock() >2):
+                    customer = random.choice([c for c in customers if len(cust_track[c.getCustomerID()]) < 3 ])
+                else:
+                    customer = random.choice([c for c in customers if c.getType()!=2])
+
+            except:
+                break
+
+            cid = customer.getCustomerID()
+            num_tools = random.choice(list(range(1,min(max(customer.getNumOfTools()),max(customer.getNumOfTools())-len(cust_track[cid]),hw_rental.GetInventoryStock())+1)))
+
+            tools = []
+            for j in range(num_tools):
+                tool = hw_rental.getTool()
+                tools.append(tool)
+                cust_track[cid].append(tool)
+
+            curr_trans_id += 1
+            hw_rental.createRental(curr_trans_id,day,customer,tools, random.choice(customer.getNumOfDays()))
 
 
 
 
 
 Class Customer():
-    def __init__(self,nt,nd,id):
+    def __init__(self,nt,nd,id,t):
         self.NumOfTools = nt
         self.NumOfDays = nd
         self.CustomerID = id
+        self.Type = t
 
     def getCustomerID(self):
         return self.CustomerID
@@ -97,20 +118,23 @@ Class Customer():
     def getNumOfTools(self):
         return self.NumOfTools
 
+    def getType(self):
+        return self.Type
+
 
 Class CasualCustomer(Customer):
     def __init__(self, id):
-        super()._init_([1,2],[1,2],id)
+        super()._init_([1,2],[1,2],id,1)
 
 
 Class BusinessCustomer(Customer):
     def __init__(self, id):
-        super()._init_([3],[7],id)
+        super()._init_([3],[7],id,2)
 
 
 Class RegularCustomer(Customer):
     def __init__(self, id):
-        super()._init_([1,2,3],[3,4,5],id)
+        super()._init_([1,2,3],[3,4,5],id,3)
 
 
 
@@ -176,12 +200,14 @@ if __name__ == '__main__':
 
     customers = []
 
-    for i in range(10):
-        customers.append(createCustomer(random.choice([1,2,3])))
+    for i in range(11):
+        if i in [1,2,3,4]:
+            customers.append(createCustomer(1,i))
+        if i in [5,6,7]:
+            customers.append(createCustomer(2,i))
+        if i in [8,9,10]:
+            customers.append(createCustomer(3,i))
 
 
-
-
-    while(
-
-    random.choice(list(range(10)))
+    DaysSimulator(customers,tools)
+    
