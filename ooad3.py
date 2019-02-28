@@ -27,16 +27,21 @@ class Store():
             if self.active_transactions[i][4] > day_num:
                 break
 
-        completed_returns  = self.active_transactions[:j]
+        completed_returns  = self.active_transactions[:j+1]
 
-
+        # print("\nday", day_num)
+        # print("Before tool",len(self.Tools))
         for row in completed_returns:
             ret[row[1]] = row[2]
             for t in row[2]:
                 self.Tools.add(t)
-
+        # print("After tool",len(self.Tools))
+        #
+        # print("Before", len(self.active_transactions))
         self.completed_transactions.extend(completed_returns)
         self.active_transactions = self.active_transactions[j+1:]
+        #print("After", len(self.active_transactions))
+
 
         return ret
 
@@ -64,7 +69,7 @@ class Store():
         self.active_transactions.append([trans_id,c_id,tools,day_num,return_day,total_price])
 
     def generateReport(self):
-        print("Number of tools currently available: ", len(self.Tools))
+        print("\nNumber of tools currently available: ", len(self.Tools))
         for t in self.Tools:
             print(t.getType() + str(t.GetID()))
         total_price = 0
@@ -72,25 +77,16 @@ class Store():
             total_price += a[5]
         for c in self.completed_transactions:
             total_price += c[5]
-        print("Amount of money they store made in 35 days: ", total_price)
+        print("\nAmount of money they store made in 35 days: ", total_price)
 
-        print("Completed Rentals: ")
+        print("\nCompleted Rentals: ")
         for c in self.completed_transactions:
-            print("\nCustomer ID: ", c[1])
-            print("Tools Rented: ")
-            for t in c[2]:
-                print(t.getType() + str(t.GetID()))
-            print("Number of days rented: ", c[4]-c[3])
-            print("Total amount : ", c[5])
+            print("\nCustomer ID: ", c[1],"| Tools Rented: ", [t.getType() + str(t.GetID()) for t in c[2]],"| Number of days rented: ", c[4]-c[3],"| Total amount : ", c[5])
 
-        print("Active Rentals: ")
+        print("\n------------------------------------------------------------------------")
+        print("\nActive Rentals: ")
         for c in self.active_transactions:
-            print("\nCustomer ID: ", c[1])
-            print("Tools Rented: ")
-            for t in c[2]:
-                print(t.getType() + str(t.GetID()))
-            print("Nummber of days rented: ", c[4]-c[3])
-            print("Total amount : ", c[5])
+            print("\nCustomer ID: ", c[1],"| Tools Rented: ", [t.getType() + str(t.GetID()) for t in c[2]],"| Number of days rented: ", c[4]-c[3],"| Total amount : ", c[5])
 
 
 def DaysSimulator(customers,tools):
@@ -100,12 +96,16 @@ def DaysSimulator(customers,tools):
     hw_rental = Store(tools)
     for day in range(1, 36):
         #check if inventory is not empty
+        #print("\nDay ",day)#"Inventory size ",hw_rental.GetInventoryStock())
         tools_returned = hw_rental.SortandUpdate(day)
+        #print("Tools Returned", tools_returned)
+        #print("Before Update",cust_track)
+        #print("After update, Inventory size ",hw_rental.GetInventoryStock())
 
         for key,value in tools_returned.items():
             for t in value:
                 cust_track[key].remove(t)
-
+        #print("After Update",cust_track)
         while(hw_rental.GetInventoryStock() > 0):
 
             try:
@@ -116,12 +116,13 @@ def DaysSimulator(customers,tools):
                     customer = random.choice([c for c in customers if c.getType()!=2 and max(c.getNumOfTools()) - len(cust_track[c.getCustomerID()]) !=0])
 
             except:
+                #print("Day",day," cut")
                 break
 
             cid = customer.getCustomerID()
 
-            choice_days = list(set(list(range(1,min(max(customer.getNumOfTools()),max(customer.getNumOfTools())-len(cust_track[cid]),hw_rental.GetInventoryStock())+1))) & set(customer.getNumOfTools()))
-            num_tools = random.choice(choice_days)
+            choice_tools = list(set(list(range(1,min(max(customer.getNumOfTools()),max(customer.getNumOfTools())-len(cust_track[cid]),hw_rental.GetInventoryStock())+1))) & set(customer.getNumOfTools()))
+            num_tools = random.choice(choice_tools)
 
             tools = []
             for j in range(num_tools):

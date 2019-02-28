@@ -1,0 +1,360 @@
+
+Number of tools currently available:  4
+painting3
+woodwork14
+yardwork18
+plumbing10
+
+Amount of money they store made in 35 days:  4069
+
+Completed Rentals: 
+
+Customer ID:  2 | Tools Rented:  ['plumbing11'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  4 | Tools Rented:  ['painting3'] | Number of days rented:  1 | Total amount :  7
+
+Customer ID:  3 | Tools Rented:  ['concrete8'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  2 | Tools Rented:  ['yardwork20'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  4 | Tools Rented:  ['concrete5'] | Number of days rented:  2 | Total amount :  6
+
+Customer ID:  1 | Tools Rented:  ['woodwork15', 'plumbing12'] | Number of days rented:  2 | Total amount :  24
+
+Customer ID:  8 | Tools Rented:  ['painting2'] | Number of days rented:  3 | Total amount :  21
+
+Customer ID:  9 | Tools Rented:  ['concrete7'] | Number of days rented:  3 | Total amount :  9
+
+Customer ID:  3 | Tools Rented:  ['concrete8'] | Number of days rented:  2 | Total amount :  6
+
+Customer ID:  3 | Tools Rented:  ['painting3'] | Number of days rented:  2 | Total amount :  14
+
+Customer ID:  4 | Tools Rented:  ['plumbing12'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  9 | Tools Rented:  ['yardwork19', 'yardwork18'] | Number of days rented:  4 | Total amount :  40
+
+Customer ID:  4 | Tools Rented:  ['woodwork15'] | Number of days rented:  2 | Total amount :  8
+
+Customer ID:  2 | Tools Rented:  ['concrete8'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  4 | Tools Rented:  ['yardwork18'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  10 | Tools Rented:  ['plumbing11', 'yardwork20'] | Number of days rented:  4 | Total amount :  52
+
+Customer ID:  8 | Tools Rented:  ['concrete5'] | Number of days rented:  3 | Total amount :  9
+
+Customer ID:  4 | Tools Rented:  ['yardwork18'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  2 | Tools Rented:  ['plumbing11'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  9 | Tools Rented:  ['painting3', 'plumbing12'] | Number of days rented:  3 | Total amount :  45
+
+Customer ID:  1 | Tools Rented:  ['concrete8'] | Number of days rented:  2 | Total amount :  6
+
+Customer ID:  3 | Tools Rented:  ['yardwork20'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  1 | Tools Rented:  ['woodwork15'] | Number of days rented:  2 | Total amount :  8
+
+Customer ID:  4 | Tools Rented:  ['plumbing11'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  6 | Tools Rented:  ['yardwork17', 'concrete6', 'woodwork16'] | Number of days rented:  7 | Total amount :  84
+
+Customer ID:  7 | Tools Rented:  ['painting4', 'painting1', 'woodwork14'] | Number of days rented:  7 | Total amount :  126
+
+Customer ID:  5 | Tools Rented:  ['plumbing10', 'plumbing9', 'woodwork13'] | Number of days rented:  7 | Total amount :  140
+
+Customer ID:  8 | Tools Rented:  ['painting2'] | Number of days rented:  5 | Total amount :  35
+
+Customer ID:  10 | Tools Rented:  ['concrete7'] | Number of days rented:  4 | Total amount :  12
+
+Customer ID:  8 | Tools Rented:  ['yardwork19'] | Number of days rented:  4 | Total amount :  20
+
+Customer ID:  2 | Tools Rented:  ['painting3'] | Number of days rented:  2 | Total amount :  14
+
+Customer ID:  4 | Tools Rented:  ['woodwork16'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  3 | Tools Rented:  ['concrete6'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  9 | Tools Rented:  ['concrete5', 'plumbing12'] | Number of days rented:  3 | Total amount :  33
+
+Customer ID:  1 | Tools Rented:  ['plumbing12'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  4 | Tools Rented:  ['plumbing9'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  3 | Tools Rented:  ['painting2'] | Number of days rented:  1 | Total amount :  7
+
+Customer ID:  2 | Tools Rented:  ['concrete6'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  8 | Tools Rented:  ['yardwork18'] | Number of days rented:  4 | Total amount :  20
+
+Customer ID:  3 | Tools Rented:  ['concrete6'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  10 | Tools Rented:  ['woodwork14'] | Number of days rented:  3 | Total amount :  12
+
+Customer ID:  1 | Tools Rented:  ['yardwork18'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  4 | Tools Rented:  ['plumbing9'] | Number of days rented:  2 | Total amount :  16
+
+Customer ID:  2 | Tools Rented:  ['plumbing12'] | Number of days rented:  2 | Total amount :  16
+
+Customer ID:  10 | Tools Rented:  ['concrete8', 'yardwork20'] | Number of days rented:  5 | Total amount :  40
+
+Customer ID:  8 | Tools Rented:  ['woodwork16'] | Number of days rented:  4 | Total amount :  16
+
+Customer ID:  9 | Tools Rented:  ['painting1', 'plumbing10'] | Number of days rented:  4 | Total amount :  60
+
+Customer ID:  3 | Tools Rented:  ['woodwork14'] | Number of days rented:  2 | Total amount :  8
+
+Customer ID:  1 | Tools Rented:  ['plumbing9'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  4 | Tools Rented:  ['yardwork18'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  2 | Tools Rented:  ['plumbing12'] | Number of days rented:  2 | Total amount :  16
+
+Customer ID:  4 | Tools Rented:  ['plumbing9'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  1 | Tools Rented:  ['woodwork16'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  6 | Tools Rented:  ['yardwork17', 'woodwork15', 'plumbing11'] | Number of days rented:  7 | Total amount :  119
+
+Customer ID:  8 | Tools Rented:  ['painting2'] | Number of days rented:  5 | Total amount :  35
+
+Customer ID:  3 | Tools Rented:  ['yardwork18'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  4 | Tools Rented:  ['yardwork17'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  7 | Tools Rented:  ['painting4', 'woodwork13', 'painting3'] | Number of days rented:  7 | Total amount :  126
+
+Customer ID:  5 | Tools Rented:  ['yardwork19', 'concrete7', 'concrete5'] | Number of days rented:  7 | Total amount :  77
+
+Customer ID:  10 | Tools Rented:  ['concrete6'] | Number of days rented:  5 | Total amount :  15
+
+Customer ID:  10 | Tools Rented:  ['yardwork20', 'concrete8'] | Number of days rented:  4 | Total amount :  32
+
+Customer ID:  8 | Tools Rented:  ['woodwork14'] | Number of days rented:  3 | Total amount :  12
+
+Customer ID:  2 | Tools Rented:  ['plumbing12'] | Number of days rented:  2 | Total amount :  16
+
+Customer ID:  1 | Tools Rented:  ['woodwork15'] | Number of days rented:  2 | Total amount :  8
+
+Customer ID:  3 | Tools Rented:  ['painting4'] | Number of days rented:  1 | Total amount :  7
+
+Customer ID:  9 | Tools Rented:  ['plumbing10'] | Number of days rented:  4 | Total amount :  32
+
+Customer ID:  9 | Tools Rented:  ['painting1'] | Number of days rented:  4 | Total amount :  28
+
+Customer ID:  4 | Tools Rented:  ['painting2'] | Number of days rented:  2 | Total amount :  14
+
+Customer ID:  1 | Tools Rented:  ['plumbing12'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  2 | Tools Rented:  ['plumbing10'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  8 | Tools Rented:  ['yardwork18'] | Number of days rented:  3 | Total amount :  15
+
+Customer ID:  3 | Tools Rented:  ['yardwork19'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  2 | Tools Rented:  ['painting4'] | Number of days rented:  1 | Total amount :  7
+
+Customer ID:  8 | Tools Rented:  ['concrete6'] | Number of days rented:  3 | Total amount :  9
+
+Customer ID:  10 | Tools Rented:  ['concrete7'] | Number of days rented:  3 | Total amount :  9
+
+Customer ID:  4 | Tools Rented:  ['painting1'] | Number of days rented:  2 | Total amount :  14
+
+Customer ID:  1 | Tools Rented:  ['plumbing10'] | Number of days rented:  2 | Total amount :  16
+
+Customer ID:  9 | Tools Rented:  ['woodwork14'] | Number of days rented:  4 | Total amount :  16
+
+Customer ID:  10 | Tools Rented:  ['woodwork15'] | Number of days rented:  4 | Total amount :  16
+
+Customer ID:  8 | Tools Rented:  ['plumbing12'] | Number of days rented:  3 | Total amount :  24
+
+Customer ID:  3 | Tools Rented:  ['painting2'] | Number of days rented:  2 | Total amount :  14
+
+Customer ID:  2 | Tools Rented:  ['concrete6'] | Number of days rented:  2 | Total amount :  6
+
+Customer ID:  4 | Tools Rented:  ['woodwork14'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  6 | Tools Rented:  ['plumbing11', 'woodwork16', 'plumbing9'] | Number of days rented:  7 | Total amount :  140
+
+Customer ID:  1 | Tools Rented:  ['plumbing10'] | Number of days rented:  2 | Total amount :  16
+
+Customer ID:  3 | Tools Rented:  ['woodwork14'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  7 | Tools Rented:  ['painting3', 'woodwork13', 'yardwork17'] | Number of days rented:  7 | Total amount :  112
+
+Customer ID:  9 | Tools Rented:  ['yardwork18'] | Number of days rented:  5 | Total amount :  25
+
+Customer ID:  8 | Tools Rented:  ['painting4'] | Number of days rented:  4 | Total amount :  28
+
+Customer ID:  4 | Tools Rented:  ['plumbing12'] | Number of days rented:  2 | Total amount :  16
+
+Customer ID:  2 | Tools Rented:  ['plumbing9'] | Number of days rented:  2 | Total amount :  16
+
+Customer ID:  3 | Tools Rented:  ['painting3'] | Number of days rented:  1 | Total amount :  7
+
+Customer ID:  5 | Tools Rented:  ['concrete8', 'concrete5', 'yardwork20'] | Number of days rented:  7 | Total amount :  77
+
+Customer ID:  10 | Tools Rented:  ['yardwork19'] | Number of days rented:  4 | Total amount :  20
+
+Customer ID:  9 | Tools Rented:  ['concrete7'] | Number of days rented:  4 | Total amount :  12
+
+Customer ID:  1 | Tools Rented:  ['woodwork14'] | Number of days rented:  2 | Total amount :  8
+
+Customer ID:  2 | Tools Rented:  ['yardwork18'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  4 | Tools Rented:  ['concrete8'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  8 | Tools Rented:  ['woodwork15'] | Number of days rented:  4 | Total amount :  16
+
+Customer ID:  10 | Tools Rented:  ['woodwork16'] | Number of days rented:  4 | Total amount :  16
+
+Customer ID:  3 | Tools Rented:  ['plumbing9'] | Number of days rented:  2 | Total amount :  16
+
+Customer ID:  1 | Tools Rented:  ['woodwork14'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  2 | Tools Rented:  ['concrete8'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  4 | Tools Rented:  ['yardwork19'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  8 | Tools Rented:  ['painting4'] | Number of days rented:  4 | Total amount :  28
+
+Customer ID:  1 | Tools Rented:  ['woodwork14'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  2 | Tools Rented:  ['concrete8'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  8 | Tools Rented:  ['concrete7'] | Number of days rented:  3 | Total amount :  9
+
+Customer ID:  3 | Tools Rented:  ['woodwork16'] | Number of days rented:  2 | Total amount :  8
+
+Customer ID:  4 | Tools Rented:  ['concrete5'] | Number of days rented:  2 | Total amount :  6
+
+Customer ID:  1 | Tools Rented:  ['painting4'] | Number of days rented:  1 | Total amount :  7
+
+Customer ID:  2 | Tools Rented:  ['concrete8'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  6 | Tools Rented:  ['painting2', 'painting1', 'concrete6'] | Number of days rented:  7 | Total amount :  119
+
+Customer ID:  9 | Tools Rented:  ['plumbing12'] | Number of days rented:  5 | Total amount :  40
+
+Customer ID:  10 | Tools Rented:  ['woodwork15'] | Number of days rented:  4 | Total amount :  16
+
+Customer ID:  9 | Tools Rented:  ['yardwork18'] | Number of days rented:  4 | Total amount :  20
+
+Customer ID:  8 | Tools Rented:  ['plumbing9'] | Number of days rented:  3 | Total amount :  24
+
+Customer ID:  1 | Tools Rented:  ['concrete5'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  3 | Tools Rented:  ['woodwork16'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  4 | Tools Rented:  ['woodwork14'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  2 | Tools Rented:  ['painting4'] | Number of days rented:  1 | Total amount :  7
+
+Customer ID:  7 | Tools Rented:  ['plumbing10', 'yardwork17', 'woodwork13'] | Number of days rented:  7 | Total amount :  119
+
+Customer ID:  8 | Tools Rented:  ['concrete7'] | Number of days rented:  3 | Total amount :  9
+
+Customer ID:  2 | Tools Rented:  ['yardwork17'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  3 | Tools Rented:  ['painting2'] | Number of days rented:  1 | Total amount :  7
+
+Customer ID:  1 | Tools Rented:  ['woodwork13'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  5 | Tools Rented:  ['yardwork20', 'plumbing11', 'painting3'] | Number of days rented:  7 | Total amount :  140
+
+Customer ID:  10 | Tools Rented:  ['yardwork19'] | Number of days rented:  5 | Total amount :  25
+
+Customer ID:  4 | Tools Rented:  ['woodwork14'] | Number of days rented:  2 | Total amount :  8
+
+Customer ID:  1 | Tools Rented:  ['painting3'] | Number of days rented:  1 | Total amount :  7
+
+Customer ID:  2 | Tools Rented:  ['plumbing11'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  10 | Tools Rented:  ['woodwork16'] | Number of days rented:  3 | Total amount :  12
+
+Customer ID:  9 | Tools Rented:  ['painting4'] | Number of days rented:  3 | Total amount :  21
+
+Customer ID:  3 | Tools Rented:  ['yardwork17'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  1 | Tools Rented:  ['yardwork20'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  4 | Tools Rented:  ['concrete7'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  8 | Tools Rented:  ['yardwork18'] | Number of days rented:  4 | Total amount :  20
+
+Customer ID:  2 | Tools Rented:  ['painting3'] | Number of days rented:  2 | Total amount :  14
+
+Customer ID:  1 | Tools Rented:  ['yardwork20'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  3 | Tools Rented:  ['yardwork19'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  4 | Tools Rented:  ['woodwork16'] | Number of days rented:  1 | Total amount :  4
+
+Customer ID:  8 | Tools Rented:  ['plumbing10'] | Number of days rented:  4 | Total amount :  32
+
+Customer ID:  10 | Tools Rented:  ['woodwork14'] | Number of days rented:  3 | Total amount :  12
+
+Customer ID:  1 | Tools Rented:  ['yardwork19'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  6 | Tools Rented:  ['concrete8', 'painting1', 'concrete6'] | Number of days rented:  7 | Total amount :  91
+
+Customer ID:  3 | Tools Rented:  ['woodwork16'] | Number of days rented:  2 | Total amount :  8
+
+Customer ID:  4 | Tools Rented:  ['painting3'] | Number of days rented:  2 | Total amount :  14
+
+Customer ID:  2 | Tools Rented:  ['yardwork20'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  7 | Tools Rented:  ['plumbing9', 'plumbing12', 'concrete5'] | Number of days rented:  7 | Total amount :  133
+
+Customer ID:  9 | Tools Rented:  ['concrete7'] | Number of days rented:  4 | Total amount :  12
+
+Customer ID:  1 | Tools Rented:  ['yardwork19'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  2 | Tools Rented:  ['plumbing12'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  4 | Tools Rented:  ['yardwork18'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  5 | Tools Rented:  ['woodwork13', 'woodwork15', 'painting2'] | Number of days rented:  7 | Total amount :  105
+
+Customer ID:  8 | Tools Rented:  ['yardwork17'] | Number of days rented:  5 | Total amount :  25
+
+Customer ID:  3 | Tools Rented:  ['yardwork20'] | Number of days rented:  2 | Total amount :  10
+
+Customer ID:  1 | Tools Rented:  ['concrete7'] | Number of days rented:  1 | Total amount :  3
+
+Customer ID:  2 | Tools Rented:  ['yardwork19'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  4 | Tools Rented:  ['plumbing9'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  8 | Tools Rented:  ['plumbing10'] | Number of days rented:  5 | Total amount :  40
+
+Customer ID:  10 | Tools Rented:  ['woodwork14'] | Number of days rented:  4 | Total amount :  16
+
+Customer ID:  1 | Tools Rented:  ['plumbing10'] | Number of days rented:  1 | Total amount :  8
+
+Customer ID:  2 | Tools Rented:  ['yardwork20'] | Number of days rented:  2 | Total amount :  10
+
+------------------------------------------------------------------------
+
+Active Rentals: 
+
+Customer ID:  4 | Tools Rented:  ['concrete7'] | Number of days rented:  2 | Total amount :  6
+
+Customer ID:  3 | Tools Rented:  ['woodwork13'] | Number of days rented:  2 | Total amount :  8
+
+Customer ID:  6 | Tools Rented:  ['painting4', 'concrete6', 'concrete8'] | Number of days rented:  7 | Total amount :  91
+
+Customer ID:  9 | Tools Rented:  ['painting1'] | Number of days rented:  5 | Total amount :  35
+
+Customer ID:  8 | Tools Rented:  ['plumbing9'] | Number of days rented:  4 | Total amount :  32
+
+Customer ID:  7 | Tools Rented:  ['plumbing11', 'woodwork16', 'concrete5'] | Number of days rented:  7 | Total amount :  105
+
+Customer ID:  5 | Tools Rented:  ['woodwork15', 'plumbing12', 'painting2'] | Number of days rented:  7 | Total amount :  133
+
+Customer ID:  1 | Tools Rented:  ['yardwork17'] | Number of days rented:  1 | Total amount :  5
+
+Customer ID:  10 | Tools Rented:  ['yardwork19'] | Number of days rented:  3 | Total amount :  15
+
+Customer ID:  2 | Tools Rented:  ['yardwork20'] | Number of days rented:  1 | Total amount :  5
