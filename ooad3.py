@@ -19,6 +19,9 @@ class Store():
         self.Tools.remove(tool)
         return tool
 
+    def GetInventoryStock(self):
+        return len(self.Tools)
+
     def SortandUpdate(self,day_num):
         '''Sort and move all the active transactions that are completed for the day
         to the completed transactions database'''
@@ -46,12 +49,6 @@ class Store():
         self.active_transactions = self.active_transactions[j+1:]
 
         return ret
-
-    def ReturnAvailTools(self):
-        return list(set(Tools))
-
-    def GetInventoryStock(self):
-        return len(self.Tools)
 
     def createRental(self,trans_id,day_num,customer,req_tools,num_nights):
         '''Add a transaction to store a current Rental'''
